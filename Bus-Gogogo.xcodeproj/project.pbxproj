@@ -432,6 +432,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Weijing Liu";
 				TargetAttributes = {
+					FB517C3318DDDF43005C7881 = {
+						DevelopmentTeam = S62C7BAM48;
+					};
 					FB517C5418DDDF43005C7881 = {
 						TestTargetID = FB517C3318DDDF43005C7881;
 					};
@@ -634,7 +637,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bus-Gogogo/Bus-Gogogo-Prefix.pch";
 				INFOPLIST_FILE = "Bus-Gogogo/Bus-Gogogo-Info.plist";
@@ -650,7 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bus-Gogogo/Bus-Gogogo-Prefix.pch";
 				INFOPLIST_FILE = "Bus-Gogogo/Bus-Gogogo-Info.plist";
