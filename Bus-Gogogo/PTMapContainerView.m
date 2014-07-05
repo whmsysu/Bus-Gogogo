@@ -32,11 +32,6 @@ static NSString *const kMapViewReuseIdentifierVehcileJourneys = @"vehcile_journe
 
 @implementation PTMapContainerView
 
-- (id)init
-{
-  assert(NO);
-}
-
 - (id)initWithFrame:(CGRect)frame
 {
   self = [super initWithFrame:frame];
@@ -84,7 +79,7 @@ static NSString *const kMapViewReuseIdentifierVehcileJourneys = @"vehcile_journe
   }];
   
   // zoom region to fit stopGroup.
- self.mapView.region = [self.stopGroup coordinateRegion];
+  [self.mapView setRegion:[self.stopGroup coordinateRegion] animated:YES];
 }
 
 - (void)setVehicleJourneys:(NSArray *)vehicleJourneys
@@ -96,7 +91,6 @@ static NSString *const kMapViewReuseIdentifierVehcileJourneys = @"vehcile_journe
 
 - (void)_configureMapViewWithVehicleJourneys:(NSArray *)vehicleJourneys
 {
-  assert(self.vehicleJourneys != vehicleJourneys);
   
 #if 0 // 1 to enable overlays
   [self.mapView removeOverlays:self.circlesForVehicleJourneys];
@@ -133,7 +127,7 @@ static NSString *const kMapViewReuseIdentifierVehcileJourneys = @"vehcile_journe
 - (void)_configureMapViewWithUserLocation:(CLLocation *)userLocation
 {
   MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 1000, 1000);
-  self.mapView.region = region;
+  [self.mapView setRegion:region animated:YES];
 }
 
 #pragma mark - MKMapViewDelegate
@@ -145,7 +139,7 @@ static NSString *const kMapViewReuseIdentifierVehcileJourneys = @"vehcile_journe
   } else if (mode == MKUserTrackingModeFollow) {
     mapView.showsUserLocation = YES;
     MKCoordinateRegion region = [self _regionForUserTrackingModeFollow];
-    [mapView setRegion:region animated:NO];
+    [mapView setRegion:region animated:YES];
   }
   [mapView setNeedsDisplay];
 }
