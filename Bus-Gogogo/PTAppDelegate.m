@@ -86,6 +86,10 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
    */
   NSString *str = [NSString stringWithFormat: @"Error: %@", err];
   NSLog(@"Fail to register the APNS push service:%@",str);
+    /**
+     *  add my push token for simulator test 
+     */
+  _remoteService = [[PTRemoteService alloc] initWithPushToken:@"ebe293a6e1651defb50cd4a4a6f2f91f250afba1584987f47d0de8209a7586b4"];
 }
 
 + (PTAppDelegate *)mainDelegate
